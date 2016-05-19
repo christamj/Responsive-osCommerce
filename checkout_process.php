@@ -110,8 +110,13 @@
                           'billing_state' => $order->billing['state'], 
                           'billing_country' => $order->billing['country']['title'], 
                           'billing_address_format_id' => $order->billing['format_id'], 
+                          //BOF Order Editor
+                          //'payment_method' => $order->info['payment_method'], 
+                          //'cc_type' => $order->info['cc_type'], 
                           'payment_method' => $order->info['payment_method'], 
-                          'cc_type' => $order->info['cc_type'], 
+                          'shipping_module' => $shipping['id'],
+                          'cc_type' => $order->info['cc_type'],
+                          //EOF Order Editor
                           'cc_owner' => $order->info['cc_owner'], 
                           'cc_number' => $order->info['cc_number'], 
                           'cc_expires' => $order->info['cc_expires'], 
